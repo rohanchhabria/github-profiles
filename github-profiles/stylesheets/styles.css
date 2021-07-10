@@ -1,0 +1,128 @@
+:root {
+    --black: rgb(0, 0, 0);;
+    --white: rgb(255, 255, 255);
+    --gray: rgb(21, 24, 28);
+    --another-gray: rgb(47, 51, 54);
+    --blue: rgb(29, 161, 242);
+    --box-shadow: rgba(255, 255, 255, 0.5);
+}
+
+* {
+    /* margin: 0; */
+    box-sizing: border-box;
+}
+
+.app-title {
+    /* text-align: center; */
+    text-transform: capitalize;
+    /* letter-spacing: 1px; */
+    top: 100px;
+    /* padding-top: 30px;
+    padding-bottom: 30px; */
+    margin: 20px;
+    /* border: 1px solid white; */
+}
+
+body {
+    background-color: var(--black);
+    color: var(--blue);
+    font-family: Helvetica;
+    /* display: flex;
+    flex-direction: column; */
+    /* align-items: center;
+    justify-content: center; */
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+}
+
+.form {
+    width: 100%;
+    padding: 20px;
+    /* margin: 20px; */
+    /* border: 1px solid white; */
+}
+
+.form input {
+    width: 100%;
+    display: block;
+    background-color: var(--gray);
+    border: none;
+    border-radius: 10px;
+    color: var(--white);
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    box-shadow: 0 5px 10px rgba(154, 165, 211, 0.05), 0 15px 40px rgba(255, 250, 250, 0.05);
+}
+
+.form input::placeholder {
+    color: #bbb;
+}
+
+.form input:focus {
+    outline: none;
+}
+
+.card {
+    max-width: 800px;
+    background-color: var(--gray);
+    color: whitesmoke;
+    border-radius: 20px;
+    box-shadow: 0 5px 10px rgba(154, 165, 211, 0.05), 0 15px 40px rgba(255, 250, 250, 0.05);
+    display: flex;
+    padding: 3rem;
+    margin: 0 1.5rem;
+}
+
+.profile-picture {
+    border-radius: 50%;
+    border: 6px solid var(--blue);
+    width: 150px;
+    height: 150px;
+}
+
+.user-info {
+    color: var(--white);
+    margin-left: 2rem;
+}
+
+.user-info h2 {
+    margin-top: 0;
+}
+
+.user-info ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    max-width: 400px;
+}
+
+.user-info ul li {
+    display: flex;
+    align-items: center;
+}
+
+.user-info ul li strong {
+    font-size: 0.92rem;
+    margin-left: 0.2rem;
+}
+
+.repository {
+    text-decoration: none;
+    color: var(--blue);
+    background-color: var(--another-gray);
+    font-size: 0.9rem;
+    padding: 0.25rem 0.5rem;
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+}
+
+@media(max-width: 500px) {
+    .card {
+        flex-direction: column;
+        align-items: center;
+    }
+}
